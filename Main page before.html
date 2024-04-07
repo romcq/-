@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Образовательная Платформа</title>
+<style>
+  body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: #FFF2E6;
+    display: flex;
+    flex-direction: column;
+  }
+  .header {
+    background-color: #C69A62;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  .header nav {
+    display: flex;
+    flex-grow: 1; /* Равномерно распределяем пространство между элементами */
+    justify-content: center; /* Центрируем элементы навигации по горизонтали */
+  }
+  .header a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 15px;
+  }
+  .header a:hover {
+    background-color: #a67850;
+  }
+  .header a:nth-child(4) {
+    margin-left: -300px; /* Устанавливаем отступ слева между кнопками */
+  }
+  .header a:nth-child(3) {
+    margin-right: 30px; /* Устанавливаем отступ слева между кнопками */
+  }
+  
+  .main {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 60px; /* Account for header */
+    text-align: center;
+  }
+  .branding {
+    font-family: 'Times new roman', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+    text-align: left;
+  }
+  .branding h1 {
+    font-size: 120px; 
+  }
+  .branding h2 {
+    font-size: 40px; 
+    margin-top: -70px;
+  }
+  .logo {
+    margin-right:-100px; /* Space between logo and title */
+    max-width: 500px;
+  }
+  .logo img {
+    height: 100%;
+  }
+  .cards {
+    display: flex;
+    justify-content: center;
+    gap: 100px; /* Space between the cards */
+    margin-bottom: 30px; /* Add space below the cards */
+  }
+  .card {
+    background: #FFFFFF;
+    border: 1px solid #DDD;
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: box-shadow 0.3s ease;
+    max-width: 400px;
+  }
+  .card:hover {
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  }
+  .card img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px; /* Space between image and text */
+  }
+  .card-text {
+    color: #000; /* Черный цвет для текста карточек */
+  }
+  .footer {
+    background-color: #C69A62;
+    color: white;
+    text-align: center;
+    padding: 10px 20px;
+    position: sticky;
+    bottom: 0;
+    z-index: 1000;
+  }
+  .support-button {
+    padding: 10px 20px;
+    background-color: #C69A62;
+    color: white;
+    text-decoration: none;
+    border-radius: 20px;
+    transition: background-color 0.3s;
+    position: fixed;
+    bottom: 60px; /* Raise above footer */
+    right: 20px;
+    z-index: 1001; /* Above footer */
+  }
+  .support-button:hover {
+    background-color: #a67850;
+  }
+</style>
+</head>
+<body>
+  <header class="header">
+    <div class="logo"><a href="home.html">Logo</a></div>
+    <nav>
+      <a href="home.html">Домашняя страница</a>
+      <a href="courses.html">Все курсы</a>
+      <a href="recipes.html">Рецепты</a>
+    </nav>
+    <a href="login.html">Войти</a>
+    <a href="register.html">Зарегистрироваться</a>
+  </header>
+  <main class="main">
+    <div class="branding">
+      <img src="logo.png" alt="Логотип" class="logo"/> <!-- Replace with the path to your logo image -->
+      <div>
+        <h1>Logo</h1>
+        <h2>платформа для обучения</h2>
+      </div>
+    </div>
+    <div class="cards">
+      <div class="card">
+        <a href="corporate-ethics.html">
+          <img src="Korparat.png" alt="Корпоративная этика">
+          <p  class="card-text">Корпоративная этика</p>
+        </a>
+      </div>
+      <div class="card">
+        <a href="internship.html">
+          <img src="Stazher.png" alt="Стажер в кофейне">
+          <p  class="card-text">Стажер в кофейне</p>
+        </a>
+      </div>
+    </div>
+  </main>
+  <footer class="footer">
+    Logo - платформа для обучения и аттестации сотрудников кофеен
+  </footer>
+  <a href="support.html" class="support-button">Поддержка</a>
+</body>
+</html>

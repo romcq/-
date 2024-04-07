@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Регистрация</title>
+<style>
+  body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: #FFF2E6;
+    display: flex;
+    flex-direction: column;
+  }
+  .header {
+    background-color: #C69A62;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  .header nav {
+    display: flex;
+  }
+  .header a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 15px;
+  }
+  .header a:hover {
+    background-color: #a67850;
+  }
+  .main {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 60px; /* Добавляем отступ сверху, чтобы не перекрывать header */
+  }
+  .registration-form {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 700px; /* Увеличиваем максимальную ширину формы */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 0 20px; /* Добавляем отступы по бокам */
+  }
+  .form-field {
+    margin-bottom: 10px;
+  }
+  .form-field label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  .form-field input {
+    width: 97%;
+    padding: 10px;
+    border: 1px solid #C69A62;
+    border-radius: 5px;
+  }
+  .form-button {
+    background-color: #C69A62;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 10px;
+  }
+  .footer {
+    background-color: #C69A62;
+    color: white;
+    text-align: center;
+    padding: 10px 20px;
+    position: sticky;
+    bottom: 0;
+    z-index: 1000;
+  }
+  .support-button {
+    padding: 10px 20px;
+    background-color: #C69A62;
+    color: white;
+    text-decoration: none;
+    border-radius: 20px;
+    transition: background-color 0.3s;
+    position: fixed;
+    bottom: 60px; /* Raise above footer */
+    right: 20px;
+    z-index: 1001; /* Above footer */
+  }
+  .support-button:hover {
+    background-color: #a67850;
+  }
+</style>
+</head>
+<body>
+    <header class="header">
+        <div class="logo"><a href="home.html">Logo</a></div>
+        <nav>
+          <a href="home.html">Домашняя страница</a>
+          <a href="courses.html">Все курсы</a>
+          <a href="recipes.html">Рецепты</a>
+        </nav>
+        <a href="profile.html">Профиль</a>
+      </header>
+  <main class="main">
+    <div class="registration-form">
+      <form action="your_registration_endpoint" method="POST">
+        <div class="form-field">
+          <label for="name">Имя</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-field">
+          <label for="surname">Фамилия</label>
+          <input type="text" id="surname" name="surname" required>
+        </div>
+        <div class="form-field">
+          <label for="phone">Номер телефона</label>
+          <input type="tel" id="phone" name="phone" required>
+        </div>
+        <div class="form-field">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-field">
+          <label for="password">Пароль</label>
+          <input type="password" id="password" name="password" required>
+        </div>
+        <div class="form-field">
+          <label for="workplace">Место работы</label>
+          <input type="text" id="workplace" name="workplace" required>
+        </div>
+        <button type="submit" class="form-button">ЗАРЕГИСТРИРОВАТЬСЯ</button>
+      </form>
+    </div>
+  </main>
+  <footer class="footer">
+    <footer class="footer">
+        Logo - платформа для обучения и аттестации сотрудников кофеен
+      </footer>
+      <a href="support.html" class="support-button">Поддержка</a>
+    </body>
+</html>
